@@ -1,0 +1,37 @@
+<form class="form" [formGroup]="detailsForm" (ngSubmit)="onSubmit();" *ngIf="loaded">
+    <div class="form__header">
+        <app-back></app-back>
+        <app-logo-shop [image]="item.picture"></app-logo-shop>
+        <div class="form__info">
+            <h1 class="form__title">{{item.name}}</h1>
+            <p class="form__code">ID: {{item.id}}</p>
+        </div>
+    </div>
+    <h2 class="form__section">Informações Básicas</h2>
+    <div class="ui-row">
+        <div class="ui-col">
+            <label class="ui-label">Nome</label>
+            <input type="text" class="ui-input" placeholder="Digite a nome" formControlName="name">
+        </div>
+        <div class="ui-col">
+            <label class="ui-label">E-mail</label>
+            <input type="email" class="ui-input" placeholder="Digite o e-mail" formControlName="email">
+        </div>
+    </div>
+    <div class="ui-row">
+        <div class="ui-col">
+            <label class="ui-label">Endereço</label>
+            <input type="text" class="ui-input" placeholder="Digite o endereço" formControlName="address">
+        </div>
+        <div class="ui-col">
+            <label class="ui-label">Telefone</label>
+            <input type="text" class="ui-input" placeholder="Digite o telefone" formControlName="phone">
+        </div>
+    </div>
+    <div class="ui-row">
+        <p class="form__observations">
+            <span *ngIf="saved">Informações alteradas com sucesso!</span>
+        </p>
+        <input type="submit" class="ui-button" value="Salvar" [disabled]="!detailsForm.valid">
+    </div>
+</form>

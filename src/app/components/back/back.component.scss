@@ -1,0 +1,11 @@
+svg {
+    cursor: pointer;
+    path {
+        transition: .4s;
+    }
+    &:hover {
+        path {
+            fill: #28CC9B !important;
+        }
+    }
+}

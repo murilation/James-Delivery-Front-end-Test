@@ -1,0 +1,13 @@
+<a routerLink="/detalhes/{{data.id}}" class="item">
+    <app-logo-shop [image]="data.picture"></app-logo-shop>
+    <div class="item__info">
+        <div class="item__heading">
+            <h1 class="item__title">{{data.name}}</h1>
+            <p class="item__code">{{data.index + 1}}</p>
+        </div>
+        <p>
+            <span class="item__city">{{data.email}}</span>
+            <span>{{data.address}}</span>
+        </p>
+    </div>
+</a>

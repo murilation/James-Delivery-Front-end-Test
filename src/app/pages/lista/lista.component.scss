@@ -1,0 +1,13 @@
+.list {
+    &:hover app-card:not(:hover) {
+        opacity: 0.5;
+        transform: scale(.98);
+    }
+    app-card {
+        transition: .4s;
+        display: block;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}
